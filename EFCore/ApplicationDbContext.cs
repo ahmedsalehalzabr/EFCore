@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EFCore.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,6 @@ namespace EFCore
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options) =>
             options.UseSqlServer(@"Data Source=(localdb)\ProjectModels;Initial Catalog=EFECore;Integrated Security=True");
-        public DbSet<Eemployeee> Employees { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
     }
 }
